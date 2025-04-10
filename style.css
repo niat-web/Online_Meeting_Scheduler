@@ -1,0 +1,144 @@
+/* style.css */
+ :root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --accent-color: #ffc107;
+ }
+ 
+ [data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --primary-color: #00aaff;
+  --secondary-color: #888;
+  --accent-color: #ffda6b;
+ }
+ 
+ body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+ }
+ 
+ .header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+ }
+ 
+ .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+ }
+ 
+ h1,
+ h2 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+ }
+ 
+ form {
+  margin-bottom: 1rem;
+ }
+ 
+ label {
+  display: block;
+  margin-bottom: 0.5rem;
+ }
+ 
+ .form-control {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+ }
+ 
+ .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+ }
+ 
+ .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+ }
+ 
+ .btn-primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+  border-color: darken(var(--primary-color), 10%);
+ }
+ 
+ .btn-info {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #fff;
+ }
+ 
+ .btn-info:hover {
+  background-color: darken(var(--secondary-color), 10%);
+  border-color: darken(var(--secondary-color), 10%);
+ }
+ 
+ .footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: 2rem;
+ }
+ 
+ #timezoneInfo {
+  border: 1px solid var(--secondary-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+ }
+ 
+ #timezoneInfo p {
+  margin-bottom: 0.5rem;
+ }
+ 
+ /* Dark Mode Toggle */
+ #darkModeToggle {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+ }
+ 
+ #darkModeToggle:hover {
+  background-color: darken(var(--secondary-color), 10%);
+  border-color: darken(var(--secondary-color), 10%);
+ }
+ 
+ /* Form validation styles */
+ .form-group .invalid-feedback {
+  display: none;
+  color: #dc3545;
+ }
+ 
+ .form-group .form-control.is-invalid {
+  border-color: #dc3545;
+ }
+ 
+ .form-group .form-control.is-invalid+.invalid-feedback {
+  display: block;
+ }
+ 
+ /*Notification style */
+ #formNotification {
+  padding: 10px;
+  border-radius: 5px;
+ }
+ 
+ #formNotification.success {
+  background-color: #d4edda;
+  color: #155724;
+ }
+ 
+ #formNotification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+ }

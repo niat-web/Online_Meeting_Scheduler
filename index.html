@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Meeting Scheduler</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+ </head>
+ 
+ <body>
+  <header class="header">
+  <div class="container text-center">
+  <h1>Online Meeting Scheduler</h1>
+  <p>Schedule, manage, and coordinate meetings seamlessly.</p>
+  <button id="darkModeToggle" class="btn btn-sm btn-outline-light"><i class="fas fa-moon"></i> Dark
+  Mode</button>
+  </div>
+  </header>
+ 
+  <main class="container mt-4">
+  <section id="meetingScheduler">
+  <h2>Schedule a Meeting</h2>
+  <form id="meetingForm">
+  <div class="form-group">
+  <label for="meetingTitle">Meeting Title</label>
+  <input type="text" class="form-control" id="meetingTitle" placeholder="Enter meeting title"
+  required>
+  <div class="invalid-feedback">Please enter a meeting title.</div>
+  </div>
+ 
+  <div class="form-group">
+  <label for="meetingDate">Date</label>
+  <input type="date" class="form-control" id="meetingDate" required>
+  <div class="invalid-feedback">Please select a date.</div>
+  </div>
+ 
+  <div class="form-group">
+  <label for="meetingTime">Time</label>
+  <input type="time" class="form-control" id="meetingTime" required>
+  <div class="invalid-feedback">Please select a time.</div>
+  </div>
+ 
+  <div class="form-group">
+  <label for="meetingDuration">Duration (minutes)</label>
+  <input type="number" class="form-control" id="meetingDuration" placeholder="Enter duration"
+  required>
+  <div class="invalid-feedback">Please enter a duration.</div>
+  </div>
+ 
+  <div class="form-group">
+  <label for="meetingParticipants">Participants</label>
+  <input type="text" class="form-control" id="meetingParticipants"
+  placeholder="Enter participants (comma-separated)" required>
+  <div class="invalid-feedback">Please enter at least one participant.</div>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Schedule Meeting</button>
+  </form>
+  <div id="formNotification" class="mt-3"></div>
+  </section>
+ 
+  <section id="timezoneChecker" class="mt-4">
+  <h2>Timezone Checker</h2>
+  <div class="form-group">
+  <label for="timezoneSelect">Select Timezone</label>
+  <select class="form-control" id="timezoneSelect">
+  <option value="America/Los_Angeles">America/Los_Angeles</option>
+  <option value="America/New_York">America/New_York</option>
+  <option value="Europe/London">Europe/London</option>
+  <option value="Asia/Tokyo">Asia/Tokyo</option>
+  <option value="Australia/Sydney">Australia/Sydney</option>
+  </select>
+  </div>
+  <button id="checkTimezoneButton" class="btn btn-info">Check Timezone</button>
+  <button id="refreshDataButton" class="btn btn-secondary">Refresh Data</button>
+  <div id="timezoneInfo" class="mt-3"></div>
+  </section>
+ 
+  <section id="meetingList" class="mt-4">
+  <h2>Upcoming Meetings</h2>
+  <div id="meetingsContainer">
+  <!-- Meetings will be dynamically added here -->
+  </div>
+  </section>
+  </main>
+ 
+  <footer class="footer mt-4">
+  <div class="container text-center">
+  <p>&copy; 2024 Online Meeting Scheduler</p>
+  <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+  </div>
+  </footer>
+ 
+  <script src="script.js"></script>
+ </body>
+ 
+ </html>
