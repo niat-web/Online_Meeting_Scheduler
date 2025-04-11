@@ -1,11 +1,11 @@
-```markdown
+
 # Online_Meeting_Scheduler
 
 ## Objective
 The Online Meeting Scheduler is a web application designed to facilitate the scheduling of meetings by allowing users to input meeting details such as title, date, time, duration, and participants. It incorporates a dark mode toggle for improved user experience and includes a timezone checker that utilizes the `ipgeolocation.io` API to display detailed timezone information. The application is built using HTML, CSS, and JavaScript.
 
 ## Output
-<iframe src="https://github.com/niat-web/Online_Meeting_Scheduler" height="1000" width="300" title="Online_Meeting_Scheduler"></iframe>
+<iframe src="https://niat-web.github.io/Online_Meeting_Scheduler/" height="1000" width="300" title="Online_Meeting_Scheduler"></iframe>
 
 ## Project Requirements
 **Technologies:** HTML, CSS, JavaScript, Font Awesome (for icons), `ipgeolocation.io` API
@@ -39,4 +39,3 @@ The Online Meeting Scheduler is a web application designed to facilitate the sch
 | API | Endpoint | Description |
 |-----|----------|-------------|
 | `ipgeolocation.io` | `/timezone` | Retrieves timezone information based on the provided timezone ID. |
-```
